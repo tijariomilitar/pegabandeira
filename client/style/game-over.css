@@ -1,0 +1,30 @@
+#game-over {
+  color: #999;
+  text-align: center;
+}
+
+#result {
+	margin: auto;
+}
+
+#score {
+	margin: auto;
+	width: 600px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#teams {
+	margin: auto;
+	width: 800px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#team-a {
+	color: #ff5a5a;
+}
+
+#team-b {
+	color: #5a5aff;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flags</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link rel="stylesheet" type="text/css" href="style/load-engine.css">
+	<link rel="stylesheet" type="text/css" href="style/login.css">
+	<link rel="stylesheet" type="text/css" href="style/load-game.css">
+	<link rel="stylesheet" type="text/css" href="style/main-menu.css">
+	<link rel="stylesheet" type="text/css" href="style/pause-menu.css">
+	<link rel="stylesheet" type="text/css" href="style/game-over.css">
+	<script src='/socket.io/socket.io.js'></script>
+	<script>const socket = io.connect();</script>
+</head>
+<body>
+	<!-- LOAD GAME -->
+	<div id="load-engine">
+		<div id='engine-msg'>
+			<h1>FLAGS</h1>
+		</div>
+		<h5 id='load-msg'></h5>
+	</div>
+
+	<!-- LOGIN PAGE -->
+	<div id="login" style="display:none">
+		<ul class="pages">
+			<li class="login page">
+				<div class="form">
+					<h3 class="title">NICKNAME</h3>
+					<input class="usernameInput" type="text" id="username" maxlength="10" autocomplete="off" /><br>
+					<input type="button" class="confirmButton" onclick="registerPlayer()" value="Entrar">
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- MAIN MENU -->
+	<div id="main-menu" style="display:none">
+		<h3>MENU PRINCIPAL</h3>
+		<div>
+			<button class='btn-menu' onclick='joinRoom()' id='game-start-btn'>Buscar partida</button>
+		</div>
+		<div>
+			<button class='btn-menu' onclick='GAMESTATE.login()' id='game-start-btn'>Alterar nickname</button>
+		</div>
+	</div>
+
+	<!-- LOADING GAME SCREEN -->
+	<div id="load-game" style="display:none">
+		<h2>Aguardando outros jogadores...</h2>
+		<h4>Você está conectado</h4>
+		<div id='connected-players'>
+			
+		</div>
+	</div>
+
+	<!-- GAME CANVAS -->
+	<canvas style='display:none'></canvas>
+
+	<!-- PAUSE MENU -->
+	<div id="pause-menu" style="display:none">
+		<h4>PAUSE</h4>
+		<button onclick='endGame()'>MENU PRINCIPAL</button>
+	</div>
+
+	<div id="game-over"  style="display:none">
+		<div id='result'></div>
+		<div id='score'></div>
+		<div id='teams'>
+			<div id="team-a"></div>
+			<div id="team-b"></div>
+		</div>
+		<div>
+			<h3>Pressione Enter para voltar</h3>
+		</div>
+	</div>
+</body>
+<!-- own lib -->
+<script src='system/lib.js'></script>
+<!-- canvas -->
+<script src='system/canvas.js'></script>
+<!-- model -->
+<script src='model/player.js'></script>
+<script src='model/pitch.js'></script>
+<script src='model/score.js'></script>
+<script src='model/flag.js'></script>
+<script src='model/HUD.js'></script>
+<!-- controllers -->
+<script src='controller/player.js'></script>
+<script src='controller/players.js'></script>
+<script src='controller/pitch.js'></script>
+<script src='controller/score.js'></script>
+<script src='controller/flag.js'></script>
+<script src='controller/HUD.js'></script>
+<!-- system -->
+<script src='system/global-config.js'></script>
+<script src='system/views.js'></script>
+<!-- engine -->
+<script src='system/engine.js'></script>
+<!-- game design -->
+<script src='game-design/gamestate.js'></script>
+<script src='game-design/login.js'></script>
+<script src='game-design/main-menu.js'></script>
+<script src='game-design/ingame.js'></script>
+<script src='game-design/game-over.js'></script>
+<script src='game-design/keys.js'></script>
+<!-- socket.io connection -->
+<script src='socket.js'></script>
+</html>

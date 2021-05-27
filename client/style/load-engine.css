@@ -1,0 +1,13 @@
+#load-engine {
+  background-color: #a0c8ee;
+}
+
+#engine-msg {
+	margin-top: 15%;
+  	text-align: center;
+}
+
+#load-msg {
+	margin-bottom: 3px;
+  	text-align: center;
+}
