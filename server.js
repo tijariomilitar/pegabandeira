@@ -10,7 +10,7 @@ const io = require('socket.io')(server);
 
 const Room = function(){
 	this.players = [];
-	this.maxLenght = 6;
+	this.maxLenght = 4;
 };
 
 var rooms = [];
@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
 						++team_a;
 					};
 				};
-				if(team_a < 3){
+				if(team_a < 2){
 					rooms[i].players.push({id: socket.id, username: socket.username, connection: true, team: 'TEAM_A', score: 0, room: socket.room});
 					socket.emit('my player', {id: socket.id, username: socket.username, team: 'TEAM_A'});
 				} else {
