@@ -32,10 +32,10 @@ const Player = function(id, username, team) {
 		if(key==37 || key==65){
 			this.left = true;
 		};
-		if(key==39 || key==87){
+		if(key==39 || key==68){
 			this.right = true;
 		};
-		if(key==38 || key==68){
+		if(key==38 || key==87){
 			this.up = true;
 		};
 		if(key==40 || key==83){
@@ -47,11 +47,11 @@ const Player = function(id, username, team) {
 			this.left = false;
 			// this.dirX = 0;
 		};
-		if(key==39 || key==87){
+		if(key==39 || key==68){
 			this.right = false;
 			// this.dirX = 0;
 		};
-		if(key==38 || key==68){
+		if(key==38 || key==87){
 			this.up = false;
 			// this.dirY = 0;
 		};
