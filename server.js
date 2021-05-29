@@ -10,7 +10,7 @@ const io = require('socket.io')(server);
 
 const Room = function(){
 	this.players = [];
-	this.maxLenght = 2;
+	this.maxLenght = 3;
 };
 
 var rooms = [];

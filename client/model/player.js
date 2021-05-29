@@ -29,33 +29,33 @@ const Player = function(id, username, team) {
 		};
 	};
 	this.onKeyDown = function(key){
-		if(key==65){
+		if(key==37){
 			this.left = true;
 		};
-		if(key==68){
+		if(key==39){
 			this.right = true;
 		};
-		if(key==87){
+		if(key==38){
 			this.up = true;
 		};
-		if(key==83){
+		if(key==40){
 			this.down = true;
 		};
 	};
 	this.onKeyUp = function(key){
-		if(key==65){
+		if(key==37){
 			this.left = false;
 			// this.dirX = 0;
 		};
-		if(key==68){
+		if(key==39){
 			this.right = false;
 			// this.dirX = 0;
 		};
-		if(key==87){
+		if(key==38){
 			this.up = false;
 			// this.dirY = 0;
 		};
-		if(key==83){
+		if(key==40){
 			this.down = false;
 			// this.dirY = 0;
 		};
