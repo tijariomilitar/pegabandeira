@@ -67,7 +67,7 @@ socket.on('update score', data => {
 socket.on('touchdown', data => {
 	for(i in players){
 		if(players[i].id == data.id){
-			players[i].score += 3;
+			players[i].score += 2;
 		};
 	};
 	SCORE.TEAM_A = data.TEAM_A;
